@@ -77,13 +77,13 @@ header{position:sticky;top:0;z-index:100;background:rgba(241,241,243,0.82);backd
 .card-info p{font-size:13px;color:#7A7A7E;margin-top:4px}
 .price-wrap{margin-top:28px;display:grid;grid-template-columns:1.25fr 0.85fr;gap:20px;align-items:start}
 .price-card{background:rgba(255,255,255,0.94);border:1px solid rgba(220,221,223,0.95);border-radius:20px;overflow:hidden;backdrop-filter:blur(8px);box-shadow:0 10px 30px rgba(15,15,16,0.04)}
-.price-head{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #ECEDEF;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#9AA0A6;font-weight:700}
-.price-head span:first-child{flex:1}
-.price-head span:not(:first-child){width:90px;text-align:right}
-.price-row{display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid #F1F1F3}
+.price-head{display:grid;grid-template-columns:1fr 92px 92px;gap:10px;align-items:center;padding:16px 20px;border-bottom:1px solid #ECEDEF;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#9AA0A6;font-weight:700}
+.price-head span:first-child{text-align:left}
+.price-head span:nth-child(2),.price-head span:nth-child(3){text-align:center}
+.price-row{display:grid;grid-template-columns:1fr 92px 92px;gap:10px;align-items:center;padding:16px 20px;border-bottom:1px solid #F1F1F3}
 .price-row:last-child{border:none}
-.price-row b{flex:1;font-size:15px;font-weight:700;letter-spacing:0.02em}
-.price-row .pv{width:90px;text-align:right;font-weight:800;font-size:15px}
+.price-row b{font-size:15px;font-weight:700;letter-spacing:0.02em}
+.price-row .pv{text-align:center;font-weight:800;font-size:15px}
 .price-row .pv.pink{color:#1A1A1E}
 .price-row:nth-child(even){background:rgba(241,241,243,0.55)}
 .price-extra{margin-top:14px;background:rgba(255,255,255,0.88);border:1px solid rgba(220,221,223,0.9);border-radius:16px;padding:16px 18px;display:grid;gap:8px}
@@ -108,7 +108,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(241,241,243,0.82);backd
 .contact-links a:hover{background:#252528}
 footer{padding:22px 0;color:#9A9AA0;font-size:13px;text-align:center}
 @media(max-width:980px){.hero h1{font-size:44px}.grid{grid-template-columns:repeat(2,1fr)}.price-wrap{grid-template-columns:1fr}.contact{grid-template-columns:1fr}}
-@media(max-width:640px){.hero h1{font-size:36px}.grid{grid-template-columns:1fr 1fr}.card img{height:220px}.section h2{font-size:32px}.price-head span:not(:first-child), .price-row .pv{width:82px;font-size:14px}}
+@media(max-width:640px){.hero h1{font-size:36px}.grid{grid-template-columns:1fr 1fr}.card img{height:220px}.section h2{font-size:32px}.price-head{grid-template-columns:1fr 74px 74px;gap:6px;padding:12px 14px;font-size:10px}.price-row{grid-template-columns:1fr 74px 74px;gap:6px;padding:12px 14px}.price-row .pv{font-size:13px;white-space:nowrap}.price-head span,.price-row b{overflow:hidden;text-overflow:ellipsis}}
 </style>
 </head>
 <body>
@@ -117,7 +117,7 @@ footer{padding:22px 0;color:#9A9AA0;font-size:13px;text-align:center}
 <div>
 <div class="kicker">✦ длинные квадраты • Y2K • Hello Kitty • Chrome</div>
 <h1>Ногти, <i>которые</i><br>говорят за тебя</h1>
-<p>Моделирование на геле, укрепление, дизайны 3D-цветы, кружево, Chrome Hearts. Носится 4-5 недель без отслоек. Стерильно, уютно, эстетично. Домашний мастер.</p>
+<p>Уютная атмосфера, стерильность. работаю на дому</p>
 <div class="hero-cta"><a href="#portfolio" class="btn btn-pink">смотреть работы</a><a href="#price" class="btn btn-white">Прайс</a></div>
 </div>
 </div></section>
@@ -132,14 +132,14 @@ footer{padding:22px 0;color:#9A9AA0;font-size:13px;text-align:center}
 <div class="card"><img src="images/nails7.jpg" alt="work 7"></div>
 <div class="card"><img src="images/nails8.jpg" alt="work 8"></div>
 </div></section>
-<section class="section container" id="price"><h2>Прайс <span>— RITA SAP</span></h2><p class="sub">Позади всего — жемчужный серо-розово-голубой фон. Цены как на скрине, наращивание +300₽</p>
+<section class="section container" id="price"><h2>Прайс <span>— RITA SAP</span></h2>
 <div class="price-wrap">
 <div class="price-card">
 <div class="price-head"><span> </span><span>наращивание</span><span>коррекция</span></div>
-<div class="price-row"><b>S</b><span class="pv pink">1200 ₽</span><span class="pv">850 ₽</span></div>
-<div class="price-row"><b>M</b><span class="pv pink">1400 ₽</span><span class="pv">1050 ₽</span></div>
-<div class="price-row"><b>L</b><span class="pv pink">1500 ₽</span><span class="pv">1150 ₽</span></div>
-<div class="price-row"><b>XL</b><span class="pv pink">1600 ₽</span><span class="pv">1250 ₽</span></div>
+<div class="price-row"><b>S</b><span class="pv pink">1200 ₽</span><span class="pv">1150 ₽</span></div>
+<div class="price-row"><b>M</b><span class="pv pink">1400 ₽</span><span class="pv">1350 ₽</span></div>
+<div class="price-row"><b>L</b><span class="pv pink">1500 ₽</span><span class="pv">1450 ₽</span></div>
+<div class="price-row"><b>XL</b><span class="pv pink">1600 ₽</span><span class="pv">1550 ₽</span></div>
 <div class="price-extra">
 <div><span>1 фигурка</span><b>15 ₽</b></div>
 <div><span>френч на 1 ноготь</span><b>10 ₽</b></div>
