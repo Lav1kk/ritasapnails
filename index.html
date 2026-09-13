@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -25,7 +25,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.85);backd
 .pill:hover{transform:translateY(-1px)}
 /* hero */
 .hero{background:radial-gradient(800px 400px at 70% 10%, #FFD6E8 0%, transparent 60%), radial-gradient(600px 400px at 10% 90%, #B6FFEA 0%, transparent 60%), #FFF7FA;padding:40px 0 30px}
-.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:30px;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:30px;align-items:center;max-width:700px}
 .kicker{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #FFE0EE;padding:6px 12px;border-radius:999px;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#FF3EA5}
 .hero h1{font-family:'Unbounded',sans-serif;font-size:56px;line-height:0.9;font-weight:800;margin:18px 0 12px}
 .hero h1 i{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--pink);font-style:italic}
@@ -34,9 +34,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.85);backd
 .btn{padding:16px 24px;border-radius:999px;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:.2s}
 .btn-pink{background:var(--pink);color:#fff;box-shadow:0 10px 30px rgba(255,62,165,0.35)}
 .btn-white{background:#fff;border:1px solid #FFE0EE;color:#0A0A0A}
-.stats{display:flex;gap:24px;margin-top:22px}
-.stat b{font-family:'Unbounded',sans-serif;font-size:22px}
-.stat span{font-size:12px;color:#8A7A85;display:block;letter-spacing:0.06em;text-transform:uppercase}
+.stats{display:none}
 .hero-card{position:relative;background:var(--chrome);padding:3px;border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,0.08)}
 .hero-card-inner{background:#fff;border-radius:21px;overflow:hidden}
 .hero-card img{width:100%;height:520px;object-fit:cover;object-position:center}
@@ -93,29 +91,28 @@ footer{padding:20px 0;color:#9A8A96;font-size:13px;text-align:center}
 </style>
 </head>
 <body>
-<header><div class="container nav"><div class="logo">RITA SAP<br><span>NAILS</span></div><div class="nav-right"><a href="https://t.me/ritasap1" target="_blank" class="pill">@ritasap1</a><a href="https://t.me/ritasapnails" target="_blank" class="pill pill-pink">t.me/ritasapnails</a></div></div></header>
+<header><div class="container nav"><div class="logo">RITA SAP<br><span>NAILS</span></div><div class="nav-right"><a href="https://t.me/ritasap1" target="_blank" class="pill pill-pink">@ritasap1</a><a href="https://t.me/ritasapnails" target="_blank" class="pill">t.me/ritasapnails</a></div></div></header>
 
 <section class="hero"><div class="container hero-grid">
 <div>
 <div class="kicker">✦ длинные квадраты • Y2K • Hello Kitty • Chrome</div>
 <h1>Ногти, <i>которые</i><br>говорят за тебя</h1>
-<p>Моделирование на геле, укрепление, дизайны 3D-цветы, кружево, Chrome Hearts. Носится 4-5 недель без отслоек. Стерильно, быстро, эстетично.</p>
+<p>Моделирование на геле, укрепление, дизайны 3D-цветы, кружево, Chrome Hearts. Носится 4-5 недель без отслоек. Стерильно, уютно, эстетично. Домашний мастер.</p>
 <div class="hero-cta"><a href="#portfolio" class="btn btn-pink">Смотреть работы — 8 кейсов</a><a href="#price" class="btn btn-white">Прайс</a></div>
-<div class="stats"><div class="stat"><b>500+</b><span>клиентов</span></div><div class="stat"><b>4.9/5</b><span>отзывы</span></div><div class="stat"><b>XL</b><span>длина • квадрат</span></div></div>
+
 </div>
-<div class="hero-card"><div class="hero-card-inner"><img src="images/nails1.jpg" alt="Rita nails hero" onerror="this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&auto=format&fit=crop&q=80'"></div><div class="hero-badge"><span class="dot"></span><div><b style="font-size:14px">Окна на этой неделе есть</b><div style="font-size:12px;opacity:0.8">Отвечу в Директе за 10 мин</div></div></div></div>
 </div></section>
 
-<section class="section container" id="portfolio"><h2>Портфолио <span>— 8 работ</span></h2><p class="sub">Все — свежие работы Ritа. Нажми — откроется крупно. Заменим на твои 8 фото — просто кинь файлы в папку images/nails1-8.jpg</p>
+<section class="section container" id="portfolio"><h2>мои работы</h2>
 <div class="grid">
-<div class="card"><span class="card-label">🌸 3D цветы</span><img src="images/nails1.jpg" alt="Розовые 3D цветы" onerror="this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Розовый зефир + 3D</b><p>Матовый + глянец, объемные цветы</p></div></div>
-<div class="card"><span class="card-label">✞ Chrome Hearts</span><img src="images/nails2.jpg" alt="Chrome lace" onerror="this.src='https://images.unsplash.com/photo-1522338242992-e08ac10e43ff?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Кружево Chrome</b><p>Черное кружево, кресты, надписи</p></div></div>
-<div class="card"><span class="card-label">🧊 Мята</span><img src="images/nails3.jpg" alt="Мята" onerror="this.src='https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Мятный глянец</b><p>Вуаль, тонкие линии, градиент</p></div></div>
-<div class="card"><span class="card-label">💎 Аква</span><img src="images/nails4.jpg" alt="Аква" onerror="this.src='https://images.unsplash.com/photo-1634449571010-02389ed0f357?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Аква + текстура</b><p>Бело-голубой мрамор, 3D</p></div></div>
-<div class="card"><span class="card-label">🦋 Мрамор</span><img src="images/nails5.jpg" alt="Мрамор" onerror="this.src='https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Пастельный мрамор</b><p>Голубой/розовый разводы + цветок</p></div></div>
-<div class="card"><span class="card-label">🎨 Аэрограф</span><img src="images/nails6.jpg" alt="Аэрограф" onerror="this.src='https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Розовый аэрограф</b><p>Синие/красные вспышки, паутинка</p></div></div>
-<div class="card"><span class="card-label">🐱 Hello Kitty</span><img src="images/nails7.jpg" alt="Hello Kitty" onerror="this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Hello Kitty + бант</b><p>Белый глянец, хром кресты</p></div></div>
-<div class="card"><span class="card-label">☁️ Воздушный</span><img src="images/nails8.jpg" alt="Воздушный" onerror="this.src='https://images.unsplash.com/photo-1522338242992-e08ac10e43ff?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Розовый дым</b><p>Прозрачный, глиттер, вуаль</p></div></div>
+<div class="card"><img src="images/nails1.jpg" alt="Розовые 3D цветы" onerror="this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Розовый зефир + 3D</b><p>Матовый + глянец, объемные цветы</p></div></div>
+<div class="card"><img src="images/nails2.jpg" alt="Chrome lace" onerror="this.src='https://images.unsplash.com/photo-1522338242992-e08ac10e43ff?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Кружево Chrome</b><p>Черное кружево, кресты, надписи</p></div></div>
+<div class="card"><img src="images/nails3.jpg" alt="Мята" onerror="this.src='https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Мятный глянец</b><p>Вуаль, тонкие линии, градиент</p></div></div>
+<div class="card"><img src="images/nails4.jpg" alt="Аква" onerror="this.src='https://images.unsplash.com/photo-1634449571010-02389ed0f357?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Аква + текстура</b><p>Бело-голубой мрамор, 3D</p></div></div>
+<div class="card"><img src="images/nails5.jpg" alt="Мрамор" onerror="this.src='https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Пастельный мрамор</b><p>Голубой/розовый разводы + цветок</p></div></div>
+<div class="card"><img src="images/nails6.jpg" alt="Аэрограф" onerror="this.src='https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Розовый аэрограф</b><p>Синие/красные вспышки, паутинка</p></div></div>
+<div class="card"><img src="images/nails7.jpg" alt="Hello Kitty" onerror="this.src='https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Hello Kitty + бант</b><p>Белый глянец, хром кресты</p></div></div>
+<div class="card"><img src="images/nails8.jpg" alt="Воздушный" onerror="this.src='https://images.unsplash.com/photo-1522338242992-e08ac10e43ff?w=800&auto=format&fit=crop&q=80'"><div class="card-info"><b>Розовый дым</b><p>Прозрачный, глиттер, вуаль</p></div></div>
 </div></section>
 
 <section class="section container" id="price"><h2>Прайс</h2><p class="sub">Без сюрпризов — дизайн входит, снятие чужой работы +300</p>
@@ -129,9 +126,9 @@ footer{padding:20px 0;color:#9A8A96;font-size:13px;text-align:center}
 <div class="price-note"><h3>Почему носят 4-5 недель?</h3><ul><li><span class="check">✓</span> Выравнивание гелем, без отслоек у кутикулы</li><li><span class="check">✓</span> Стерилизация по СанПиН (сухожар, крафт-пакеты)</li><li><span class="check">✓</span> Тонкие, но прочные — удобно в жизни</li></ul></div>
 </div></section>
 
-<section class="section container"><h2>Мастер <span>Rita</span></h2><div class="about"><img src="images/nails1.jpg" alt="Rita master" onerror="this.src='https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&auto=format&fit=crop&q=80'"><div><p style="font-size:18px;line-height:1.6">Я Rita — делаю длинные квадраты, которые не ломаются и выглядят как из Pinterest. Люблю Y2K эстетику: Hello Kitty, Chrome Hearts, нежные 3D цветы.</p><div class="badge-row"><span class="badge">✦ 2 года опыта</span><span class="badge">✦ Стерильно</span><span class="badge">✦ Пешая 5 мин от метро</span><span class="badge">✦ Кофе/чай</span></div><p style="color:#8A7A85;margin-top:12px">Работаю на геле, одноразовые пилки/апельсиновые палочки. Фото без фильтров — как на фото, так и в жизни.</p></div></div></section>
+<section class="section container"><h2>Мастер <span>Rita</span></h2><div class="about"><img src="images/nails1.jpg" alt="Rita master" onerror="this.src='https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&auto=format&fit=crop&q=80'"><div><p style="font-size:18px;line-height:1.6">Я Rita — делаю длинные квадраты, которые не ломаются и выглядят как из Pinterest. Люблю Y2K эстетику: Hello Kitty, Chrome Hearts, нежные 3D цветы.</p><div class="badge-row"><span class="badge">✦ 2 года опыта</span><span class="badge">✦ Стерильно</span></div><p style="color:#8A7A85;margin-top:12px">Работаю на геле, одноразовые пилки/апельсиновые палочки. Фото без фильтров — как на фото, так и в жизни.</p></div></div></section>
 
-<section class="section container" id="book"><div class="contact"><div><h3>Жду тебя на ногти</h3><p>Пиши в Telegram — отвечаю быстро.</p><div class="contact-links"><a href="https://t.me/ritasap1" target="_blank"><span>Личка — @ritasap1</span><span>→</span></a><a href="https://t.me/ritasapnails" target="_blank"><span>Канал — t.me/ritasapnails</span><span>→</span></a></div></div><div style="background:#fff;border-radius:16px;padding:16px;color:#0A0A0A"><b>Адрес</b><p style="color:#6B5A65;margin-top:6px">ул. Примерная, 15 · 5 мин от метро<br>Пн-Вс 10:00-21:00</p><div style="margin-top:12px;background:#FFF0F6;border:1px dashed #FFB3D6;border-radius:12px;padding:12px;font-size:13px">💡 Фото — в папке `images/nails1-8.jpg` (8 работ из чата). Сейчас заглушки, после загрузки клиента появятся тут.</div></div></div></section>
+<section class="section container" id="book"><div class="contact"><div><h3>Жду тебя на ногти</h3><p>Пиши в Telegram — отвечаю быстро.</p><div class="contact-links"><a href="https://t.me/ritasap1" target="_blank"><span>Личка — @ritasap1</span><span>→</span></a><a href="https://t.me/ritasapnails" target="_blank"><span>Канал — t.me/ritasapnails</span><span>→</span></a></div></div><div style="background:#fff;border-radius:16px;padding:16px;color:#0A0A0A"><b>Адрес</b><p style="color:#6B5A65;margin-top:6px">Домашний мастер · по записи<br>Пн-Вс 10:00-21:00</p><div style="margin-top:12px;background:#FFF0F6;border:1px dashed #FFB3D6;border-radius:12px;padding:12px;font-size:13px">💡 Фото — в папке `images/nails1-8.jpg` (8 работ из чата). Сейчас заглушки, после загрузки клиента появятся тут.</div></div></div></section>
 
 <footer>© 2026 RITA SAP NAILS · @ritasap1 · t.me/ritasapnails</footer>
 </body>
